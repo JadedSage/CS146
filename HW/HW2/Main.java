@@ -20,6 +20,19 @@ public class Main {
         int calls=0;
         while(left<=right)
         {
+            if(left==right)
+            {
+                if(isBadVersion(n[left]))
+                {
+                    calls++;
+                    break;
+                }
+                else
+                {
+                    left++;
+                    break;
+                }
+            }
             int middle = (left + right-1)/2;
             boolean temp= isBadVersion(n[middle]);
             calls++;
@@ -30,15 +43,10 @@ public class Main {
             {
                 left=middle+1;
             }
-
-            if(left==right)
-            {
-                break;
-            }
         }
         System.out.println("The first bad version from the random function is: "+badVer);
         System.out.println("The first bad version found from the loop is: "+n[left]);
-        System.out.println("Calls to the API: "+calls);
+        System.out.println("Calls to the API: "+ calls);
     }
 
     /*
