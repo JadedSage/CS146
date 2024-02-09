@@ -1,0 +1,24 @@
+Problem 2:
+
+MATRIX_MULTIPLY(A, B): 						1
+
+  if columns(A) ≠ rows(B): 					1
+    raise ValueError("Matrix multiplication is not defined.") 	1
+
+  rows_A ← number of rows in A 					1
+  cols_A ← number of columns in A 				1
+  cols_B ← number of columns in B 				1
+  result ← matrix of size rows_A x cols_B filled with zeros 	1
+
+  for i from 1 to rows_A do: 					N+1
+    for j from 1 to cols_B do: 					N(N+1)
+    sum ← 0 							N*N
+    for k from 1 to cols_A do: 					N(N+1)
+      sum ← sum + A[i][k] * B[k][j] 				N*N
+    result[i][j] ← sum return result				N
+
+Once simplified it becomes 
+7+N+1+N^2+N+N^2+N^2+N+N^2+N
+Which is 
+
+3n^2+4N+8
