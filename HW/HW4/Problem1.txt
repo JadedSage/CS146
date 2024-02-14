@@ -1,0 +1,43 @@
+Problem 1:
+
+Best Case:
+From here we see that in the best case is when the array is fully sorted
+We know that from our previous homework that 3N^2+4N+1 is what we would expect
+However we can disregard the while loop because it will only run N times as the array is fully sorted meaning
+Insertion-Sort(A,n)					1
+									- //nothing
+	for(i-1) to n					N+1
+		key=A[i]					N
+		j=i-1						N
+		while j>=0 and A[j]>key		N
+			A[j+1]=A[j]				N
+			j=j-1					N
+		A[j+1]= key					N
+
+N+1+N+N+N+N+N+N+1
+7N+2
+Because the while loop never needs to loop itself
+Meaning that O(g(n))=7*N which means 
+
+O(n) is our best case
+
+Average Case:
+Lets consider the average case where the array is scrambled but the elements are only one off from sorted
+Insertion-Sort(A,n)					1
+									- //nothing
+	for(i-1) to n					N+1
+		key=A[i]					N
+		j=i-1						N
+		while j>=0 and A[j]>key		N(N+1)
+			A[j+1]=A[j]				N*N
+			j=j-1					N*N
+		A[j+1]= key					N
+
+N+1+N+N+N^2+N+N^2+N^2+N
+3N^2+4N+1
+This is because We need to actually run the while loop that is inside the For loop
+Calculating the costs we see that Ω(g(n)) is Ω(n^2)
+
+In the worse case we expect to see similar results as the average
+ Θ(g(n)) would also be Θ(n^2)
+
