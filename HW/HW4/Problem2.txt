@@ -1,0 +1,51 @@
+Problem 2:
+
+
+
+The Best Case: 
+In the best case we see that the number of rows and columns in both a and b are just 1
+
+MATRIX_MULTIPLY(A, B): 											1
+
+  if columns(A) ≠ rows(B): 										1
+    raise ValueError("Matrix multiplication is not defined.") 	1
+
+  rows_A ← number of rows in A 									1
+  cols_A ← number of columns in A 								1
+  cols_B ← number of columns in B 								1
+  result ← matrix of size rows_A x cols_B filled with zeros 	1
+
+  for i from 1 to rows_A do: 									1
+    for j from 1 to cols_B do: 									1
+    sum ← 0 													1
+    for k from 1 to cols_A do: 									1
+      sum ← sum + A[i][k] * B[k][j] 							1
+    result[i][j] ← sum return result							1
+
+13
+We see that the base case is just O(1) because the code only needs to run once all the way down
+Average case:
+The average case
+MATRIX_MULTIPLY(A, B): 											1
+
+  if columns(A) ≠ rows(B): 										1
+    raise ValueError("Matrix multiplication is not defined.") 	1
+
+  rows_A ← number of rows in A 									1
+  cols_A ← number of columns in A 								1
+  cols_B ← number of columns in B 								1
+  result ← matrix of size rows_A x cols_B filled with zeros 	1
+
+  for i from 1 to rows_A do: 									N+1
+    for j from 1 to cols_B do: 									N(N+1)
+    sum ← 0 													N*N
+    for k from 1 to cols_A do: 									N(N+1)
+      sum ← sum + A[i][k] * B[k][j] 							N*N
+    result[i][j] ← sum return result							N
+
+7+N+1+N^2+N+N^2+N^2+N+N^2+N
+3n^2+4N+8
+We see the time constrait go up to Ω(n^2) because the highest order is n^2
+
+In the worse case we expect to see similar results as the average
+ Θ(g(n)) would also be Θ(n^2)
