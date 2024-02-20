@@ -23,7 +23,7 @@ log2(100)=6.64
 f(n)= Θ(n^6.69)
 which comes down to Θ(log n)
 
-T(N) = 9T(N/2) + n^2
+T(N) = 4T(N/2) + n^2log(n)
 Master Theorem
 a=4
 b=2
