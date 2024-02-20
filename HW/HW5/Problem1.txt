@@ -1,0 +1,41 @@
+T(N) = 2T(N-1) + 1
+2(2+(n-2)+1)+1-2^2+(n-2)+1
+2^3T(N-3)+2^2+2+1
+2^kT(N-k)+2^0+2^1+2^k-1
+=>O(2^N)
+
+T(N)=3T(N-1)+N
+3(3T(N-2)+(N-1))+N
+3^2(3T(N-2)+(N-1))+N
+3^KT(N-k)+N(3^k-1)
+O(N^2)
+
+T(N) = 9T(N/2) + n^2
+Using Master Theory
+a = 5
+b = 2
+f(n) = N^2
+T(N)=Θ(N^log2(9))
+Θ(N^2)
+
+T(N) = 100T(N/2) + n^(log2cn) + 1  (c is a constant)
+log2(100)=6.64
+f(n)= Θ(n^6.69)
+which comes down to Θ(log n)
+
+T(N) = 9T(N/2) + n^2
+Master Theorem
+a=4
+b=2
+f(n)=n^2log(n)
+Θ(n^2logn)
+
+
+T(N) = 5T(N/2) + n^2/logn
+Master Theorem gives 
+a = 5
+b = 2
+f(n) = n^2/logn
+for T(N) = 5T(N/2) + n^2/logn
+this gets us to Θ(N^2.32 * log N)
+but we can simplify to Θ(N^2) 
