@@ -1,0 +1,25 @@
+Problem 2:
+Below is some pseudocode. Come up with a recurrence relation, and solve that recurrence relation using any method of your choice.  
+
+yetAnotherFunc(n): 			T(n)
+  if n > 1: 				1
+    for(i=0;i<10n;i++)		n(10n+1)
+      doSomething;			10n
+    yetAnotherFunc(n/2);	T(n/2)+1
+    yetAnotherFunc(n/2);	T(n/2)+1
+	
+	
+
+			Test(4):			
+			/	\
+		test(2)	test(2)			
+		/ \		/ \
+  test(1)test(1) test(1)test(1)
+  
+  n/(2^2k)=1
+  
+  T(n)=T(n/(2^4)+1)+1
+  T(n)=T(n/2^4)+2
+  Which this pattern repeats we can assume since there is two that
+  n/2^2k=1
+  this means thats O(log 2n)
