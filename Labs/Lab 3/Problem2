@@ -1,0 +1,16 @@
+PROBLEM 2:
+
+isPrime(n): 
+  for(i = 2, i*i <= n; i++) {
+    if(n % x == 0) {
+      return false
+    }
+  return true
+  
+ 1) n is O(1) because if the case is even/multiple of 2 it only runs once and exits the method
+ 2) O(sqrt(n)) because 
+ i*i=n
+ i^2=n
+ i=sqrt(n)
+ 
+ 3) O(sqrt(n)) because on the definition of theata you need g(n) needs to be the same which means theata takes the worse case which is similiar
