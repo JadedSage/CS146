@@ -11,9 +11,9 @@ also because the exponent is greater
 2)
 n^2*log(n) vs n*((log(n))^10)
 
-//n^2*log(n) is greater because of log rules the log becomes 
-//if you multiply by log instead of n^2 you get log(n^2)+log(log(n)) vs log(n)+log(log(n)^10)
-// 2 log (n)vs log(n) this means left is greater (review rules of log)
+n^2*log(n) is greater because of log rules the log becomes just 10n vs n^2
+if you multiply by log instead of n^2 you get log(n^2)+log(log(n)) vs log(n)+log(log(n)^10)
+ 2 log (n)vs log(n) this means left is greater (review rules of log)
 
 n^2*log(n)<=n^2* (log(n))*n^2 
 
